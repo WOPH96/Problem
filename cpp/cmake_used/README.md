@@ -1,5 +1,5 @@
-# Animal 객체 생성해보기
+# Date 클래스 디자인
 
-## 변수 -> food, weight, clean
+## 변수 -> year,month,date
 
-## 함수 -> add_animal, take_food, 
+## 함수 -> setdate,addday,..
