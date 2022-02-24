@@ -1,9 +1,12 @@
 def solution(x, n):
-    if x>=0 :
+    if x>0 :
         answer = [i for i in range(x,x*n+1,x)]
+    elif x==0:
+        answer = [0 for n in range(n)]
     else:
         answer = [i for i in range(x,x*n-1,x)]
     return answer
-
-
-print(solution(-4,2))
+    
+    
+   
+print(solution(0,5))
