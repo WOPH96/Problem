@@ -1,5 +1,3 @@
-# Date 클래스 디자인
+# CMake로 만든 C++ 프로젝트입니다.
 
-## 변수 -> year,month,date
-
-## 함수 -> setdate,addday,..
+## 끝까지 완주
