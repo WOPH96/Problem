@@ -16,6 +16,6 @@ def solution(num):
     return -1 if answer>500 else answer
 
 
-print(solution(1))
+print(solution(6))
 print(solution(16))
 print(solution(626331))
