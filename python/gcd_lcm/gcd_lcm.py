@@ -4,5 +4,5 @@ def solution(n, m):
     return answer
 
 
-print(solution(3,12))
-print(solution(2,5))
+print(solution(3, 12))
+print(solution(2, 5))
