@@ -5,7 +5,7 @@ def solution(s):
     for word in str:
         for i in range(len(word)):
             if i % 2 == 0:
-                word[i]
+                word[i] = word[i].upper()
     return answer
 
 
