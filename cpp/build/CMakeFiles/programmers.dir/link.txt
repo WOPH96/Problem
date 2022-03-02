@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/programmers.dir/main.cpp.o  -o programmers 
