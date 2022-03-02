@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/yang-wonphil/Desktop/study/programmers/python/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -o CMakeFiles/learn.dir/main.cpp.o -c /Users/yang-wonphil/Desktop/study/programmers/python/main.cpp",
+  "file": "/Users/yang-wonphil/Desktop/study/programmers/python/main.cpp"
+}
+]
