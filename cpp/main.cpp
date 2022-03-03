@@ -1,28 +1,28 @@
+#include <iostream>
 #include <string>
 #include <vector>
-#include <iostream>
+#include <algorithm>
 
 using namespace std;
 
-// 소수 = 이전의 소수로 안나눠떨어지면 소수?
-
-int solution(int n)
+struct comp
 {
-    vector<int> prime;
-    prime.push_back(2);
+    bool iterator()(const char &c) { return c < c + 1; }
+};
 
-    for (int i = 2; i <= n; i++)
-    {
-        while ()
-    }
+string solution(string s)
+{
+    string answer = "";
 
-    return prime.size();
+    cout << *(s.end() - 1) << endl;
+
+    return answer;
 }
 
 int main()
 {
 
-    cout << solution(10) << endl;
+    cout << solution("Zbcdefg") << endl;
 
     return 0;
 }
