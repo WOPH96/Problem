@@ -1,7 +1,7 @@
 [
 {
-  "directory": "/mnt/c/Users/ywonp/Desktop/study/programmers/cpp/build",
-  "command": "/usr/bin/c++    -g   -o CMakeFiles/programmers.dir/main.cpp.o -c /mnt/c/Users/ywonp/Desktop/study/programmers/cpp/main.cpp",
-  "file": "/mnt/c/Users/ywonp/Desktop/study/programmers/cpp/main.cpp"
+  "directory": "/Users/yang-wonphil/Desktop/study/programmers/cpp/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -o CMakeFiles/program.dir/main.cpp.o -c /Users/yang-wonphil/Desktop/study/programmers/cpp/main.cpp",
+  "file": "/Users/yang-wonphil/Desktop/study/programmers/cpp/main.cpp"
 }
 ]
