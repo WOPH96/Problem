@@ -1,17 +1,9 @@
 def solution(n):
-    answer = 0
 
-    lst = []
-    n = str(n)
-    for num in n:
-        lst.append(int(num))
-    lst.sort()
-    print(lst)
-
-    while(lst):
-        answer += lst.pop() * (10**len(lst))
+    n = list(str(n))
+    answer = "".join(sorted(n, reverse=True))
 
     return int(answer)
 
 
-print(solution(123412123))
+print(solution(90009))
