@@ -1,7 +1,7 @@
-# def solution(s):
-#     answer = ''
-#     s = sorted(list(s), key=lambda x: -x)
-#     return s
+def solution(s):
+    answer = ''
+    a = sorted(s, key=lambda word: ord(word), reverse=True)
+    return "".join(a)
 
 
 print(solution("Zbcdefg"))
