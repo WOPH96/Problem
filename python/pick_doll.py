@@ -5,7 +5,10 @@ from collections import deque
 def solution(board, moves):
     answer = 0
     basket=[] # stack
-    moves = deque(moves) # queue
+    moves.reverse()
+    #moves = deque(moves) # queue
+
+    
     tf = list(map(list, zip(*board)))
     
     
@@ -22,7 +25,7 @@ def solution(board, moves):
         tf[i] = [j for j in tf[i] if j not in remove_set]
     
     while moves:
-        move = moves.popleft()
+        move = moves.pop()
         
         if tf[move-1]:
             doll = tf[move-1].pop(0)
@@ -36,9 +39,6 @@ def solution(board, moves):
                 basket.append(doll)
         
         # print(basket,answer)
-
-        
-
     
     
     return answer
