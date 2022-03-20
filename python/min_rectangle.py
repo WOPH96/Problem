@@ -5,7 +5,7 @@ def solution(sizes):
 
     mx = [max(trans[0]), max(trans[1])]
     M = mx.index(max(mx))
-    m = m = M ^ 1
+    m = M ^ 1
 
     while True:
         idx = trans[m].index(mx[m])  # 작은놈의 맥스 위치
@@ -16,3 +16,8 @@ def solution(sizes):
         mx[m] = max(trans[m])
 
     return mx[0]*mx[1]
+
+
+print(solution([[60, 50], [30, 70], [60, 30], [80, 40]]))
+print(solution([[10, 7], [12, 3], [8, 15], [14, 7], [5, 15]]))
+print(solution([[14, 4], [19, 6], [6, 16], [18, 7], [7, 11]]))
