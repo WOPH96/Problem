@@ -2,8 +2,8 @@
 import sys
 import math
 
-#k, p, n = map(int, input().split())
-k, p, n = (100000000, 100000000, 1000000)
+k, p, n = map(int,sys.stdin.readline().split())
+#k, p, n = (100000000, 100000000, 1000000)
 mod = 1000000007
 
 x = math.ceil(math.log(p, mod))  # p^x > mod
