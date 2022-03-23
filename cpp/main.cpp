@@ -1,28 +1,17 @@
-#include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
-struct comp
+vector<long long> solution(int x, int n)
 {
-    bool iterator()(const char &c) { return c < c + 1; }
-};
-
-string solution(string s)
-{
-    string answer = "";
-
-    cout << *(s.end() - 1) << endl;
+    vector<long long> answer;
 
     return answer;
 }
 
 int main()
 {
-
-    cout << solution("Zbcdefg") << endl;
 
     return 0;
 }
