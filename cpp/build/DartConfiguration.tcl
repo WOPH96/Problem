@@ -4,30 +4,40 @@
 
 
 # Configuration directories and files
-SourceDirectory: /Users/yang-wonphil/Desktop/study/programmers/cpp
-BuildDirectory: /Users/yang-wonphil/Desktop/study/programmers/cpp/build
+SourceDirectory: /mnt/c/Users/ywonp/Documents/study/programmers/cpp
+BuildDirectory: /mnt/c/Users/ywonp/Documents/study/programmers/cpp/build
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: Phils-MacBookPro.local
+Site: DESKTOP-JF08IT6
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Darwin-clang++
+BuildName: Linux-x86_64-linux-gnu-g++-7
 
 # Subprojects
 LabelsForSubprojects: 
 
 # Submission information
-SubmitURL: http://
+IsCDash: 
+CDashVersion: 
+QueryCDashVersion: 
+DropSite: 
+DropLocation: 
+DropSiteUser: 
+DropSitePassword: 
+DropSiteMode: 
+DropMethod: http
+TriggerSite: 
+ScpCommand: /usr/bin/scp
 
 # Dashboard start time
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake" "/Users/yang-wonphil/Desktop/study/programmers/cpp"
-MakeCommand: /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
+ConfigureCommand: "/usr/bin/cmake" "/mnt/c/Users/ywonp/Documents/study/programmers/cpp"
+MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
 # version control
@@ -35,22 +45,22 @@ UpdateVersionOnly:
 
 # CVS options
 # Default is "-d -P -A"
-CVSCommand: 
-CVSUpdateOptions: 
+CVSCommand: CVSCOMMAND-NOTFOUND
+CVSUpdateOptions: -d -A -P
 
 # Subversion options
-SVNCommand: 
+SVNCommand: SVNCOMMAND-NOTFOUND
 SVNOptions: 
 SVNUpdateOptions: 
 
 # Git options
-GITCommand: 
+GITCommand: /usr/bin/git
 GITInitSubmodules: 
 GITUpdateOptions: 
 GITUpdateCustom: 
 
 # Perforce options
-P4Command: 
+P4Command: P4COMMAND-NOTFOUND
 P4Client: 
 P4Options: 
 P4UpdateOptions: 
@@ -62,17 +72,13 @@ UpdateOptions:
 UpdateType: 
 
 # Compiler info
-Compiler: /usr/bin/clang++
-CompilerVersion: 13.0.0.13000029
+Compiler: /usr/bin/x86_64-linux-gnu-g++-7
+CompilerVersion: 7.5.0
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
 ValgrindCommand: 
 ValgrindCommandOptions: 
-DrMemoryCommand: 
-DrMemoryCommandOptions: 
-CudaSanitizerCommand: 
-CudaSanitizerCommandOptions: 
 MemoryCheckType: 
 MemoryCheckSanitizerOptions: 
 MemoryCheckCommand: MEMORYCHECK_COMMAND-NOTFOUND
@@ -82,6 +88,10 @@ MemoryCheckSuppressionFile:
 # Coverage
 CoverageCommand: /usr/bin/gcov
 CoverageExtraFlags: -l
+
+# Cluster commands
+SlurmBatchCommand: SLURM_SBATCH_COMMAND-NOTFOUND
+SlurmRunCommand: SLURM_SRUN_COMMAND-NOTFOUND
 
 # Testing options
 # TimeOut is the amount of time in seconds to wait for processes

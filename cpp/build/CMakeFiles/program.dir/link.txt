@@ -1,1 +1,1 @@
-/usr/bin/clang++ -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/program.dir/main.cpp.o -o program 
+/usr/bin/x86_64-linux-gnu-g++-7  -g  -rdynamic CMakeFiles/program.dir/main.cpp.o  -o program 
