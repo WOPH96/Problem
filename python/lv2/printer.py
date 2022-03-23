@@ -1,4 +1,4 @@
-import heapq
+import heapq  # 리스트를 힙처럼 사용할 수 있게 해줌
 
 
 def solution(priorities, location):
@@ -7,6 +7,8 @@ def solution(priorities, location):
 
     for i in range(len(priorities)):
         heapq.heappush(hb, priorities[i])
+        #heapq.heappush(hb,(i, priorities[i]))
+    print(hb)
 
     while hb:
         print(heapq.heappop(hb))
