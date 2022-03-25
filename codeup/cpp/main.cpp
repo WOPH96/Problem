@@ -7,26 +7,23 @@
 using namespace std;
 
 /*
-10
-1 3 2 2 5 6 7 4 5 9
+1 -2 1 8
 */
 int main()
 {
-    vector<int> num(24);
-    int t;
-    cin >> t;
+    vector<long long> v;
 
-    for (int i = 0; i < t; i++)
+    int a, m, d, n;
+
+    cin >> a >> m >> d >> n;
+
+    v.push_back(a);
+
+    while (v.size() != n)
     {
-        int temp;
-        cin >> temp;
-        num[temp]++;
+        v.push_back(v.back() * m + d);
     }
-    for (auto it = num.begin() + 1; it != num.end(); it++)
-    {
-        cout << *it << " ";
-    }
-    cout << endl;
+    cout << v.back() << endl;
 
     return 0;
 }
