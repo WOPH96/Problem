@@ -1,4 +1,1 @@
-t i = 3; i <= N; i++)
-    // {
-    
-    // }
+    for (const auto &el
