@@ -25,8 +25,30 @@ int main()
 
     for (const char &elem : str)
     {
-        cout << elem;
-    }
+        if (elem == '-' || elem == '+' || elem == *str.end())
+        {
+            if (isMinus)
+            {
+                res -= stoi(num);
+            }
+            else
+            {
+                res += stoi(num);
+            }
+            num = "";
+        }
+        else
+        {
+            num += elem;
+        }
 
+        if (elem == '-')
+            isMinus = true;
+    }
+    if (isMinus)
+        res -= stoi(num);
+    else
+        res += stoi(num);
+    cout << res << endl;
     return 0;
 }
