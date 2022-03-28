@@ -20,5 +20,5 @@ int main()
     cin >> form;
     cout << form << endl;
 
-    return 0;
+        return 0;
 }
