@@ -3,29 +3,30 @@
 // #include <iostream>
 using namespace std;
 /*
-split
+55-50+40
+=-35
+
+-하나라도 나오면 전부 그 뒤는 빼버린다.
  */
-vector<string> split(string input, string delimiter)
-{
-    vector<string> ret;
-    long long pos = 0;
-    string token = "";
-    while ((pos = input.find(delimiter)) != string::npos)
-    {
-        token = input.substr(0, pos);
-        ret.push_back(token);
-        input.erase(0, pos + delimiter.length());
-        // cout << input << endl;
-    }
-    ret.push_back(input);
-    return ret;
-}
 
 int main()
 {
     ios_base ::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
+
+    string str;
+    cin >> str;
+
+    bool isMinus = false;
+
+    int res = 0;
+    string num = "";
+
+    for (const char &elem : str)
+    {
+        cout << elem;
+    }
 
     return 0;
 }
