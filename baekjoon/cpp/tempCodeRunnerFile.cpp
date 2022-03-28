@@ -1,1 +1,1 @@
-    for (const auto &el
+cout << num.find('0') << endl;
