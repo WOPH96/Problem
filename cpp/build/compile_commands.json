@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/mnt/c/Users/ywonp/Documents/study/programmers/cpp/build",
-  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -o CMakeFiles/program.dir/main.cpp.o -c /mnt/c/Users/ywonp/Documents/study/programmers/cpp/main.cpp",
-  "file": "/mnt/c/Users/ywonp/Documents/study/programmers/cpp/main.cpp"
-}
-]
