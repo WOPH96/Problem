@@ -1,1 +1,4 @@
-cout << num.find('0') << endl;
+onst auto &elem : ropes)
+    {
+        cout << elem << endl;
+    }
