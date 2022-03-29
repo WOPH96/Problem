@@ -3,15 +3,17 @@
 // #include <iostream>
 using namespace std;
 /*
-서로 다른 N개의 자연수의 합이 S라고 한다. S를 알 때, 자연수 N의 최댓값은 얼마일까?
-첫째 줄에 자연수 S(1 ≤ S ≤ 4,294,967,295)가 주어진다.
 
-200
-=>19
+첫째 줄에 정수 N이 주어진다.
+다음 N개의 줄에는 각 로프가 버틸 수 있는 최대 중량이 주어진다.
+이 값은 10,000을 넘지 않는 자연수이다.
 
-4294967295
+2
+10
+15
 
-루트 2
+=>20
+
  */
 
 int main()
@@ -20,17 +22,17 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-    long long S;
-    cin >> S;
+    int n;
+    cin >> n;
 
-    long long n = round(sqrt(S) * sqrt(2));
+    vector<int> ropes(n);
 
-    while (n * (n + 1) / 2 > S)
+    for (auto &elem : ropes)
     {
-        n--;
+        cin << elem;
     }
 
-    cout << n << endl;
+    // int m_w = max()
 
     return 0;
 }
