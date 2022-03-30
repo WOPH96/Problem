@@ -1,1 +1,2 @@
-long
+int(jw);
+    // pr
