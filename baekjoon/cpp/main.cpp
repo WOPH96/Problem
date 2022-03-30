@@ -56,7 +56,8 @@ void solution()
     int zero_cnt = 0;
     while (!v.empty() && v.back() >= 0)
     {
-        if (v.size() >= 2 && *(v.end() - 2) > 1)
+        int size = size;
+        if (size >= 2 && *(v.end() - 2) > 1)
         {
             int last = v.back();
             v.pop_back();
@@ -64,7 +65,7 @@ void solution()
             v.pop_back();
             res += last;
         }
-        else if (v.size() >= 2 && (*(v.end() - 2) == 1))
+        else if (size >= 2 && (*(v.end() - 2) == 1))
         {
             int last = v.back();
             v.pop_back();
@@ -95,7 +96,8 @@ void solution()
     // print(v);
     while (!v.empty())
     {
-        if (v.size() >= 2)
+        int size = v.size();
+        if (size >= 2)
         {
             int last = v.back();
             v.pop_back();
