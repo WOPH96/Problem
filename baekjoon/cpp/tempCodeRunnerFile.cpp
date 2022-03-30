@@ -1,2 +1,4 @@
-cout << N << endl;
-    
+!v.empty())
+    // {
+    //     cout << v.back() << endl;
+    // }
