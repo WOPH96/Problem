@@ -1,2 +1,2 @@
-< P << " " << V << " " << endl;
-    //     solution();
+
+        if (sum < *(&x + 1))
