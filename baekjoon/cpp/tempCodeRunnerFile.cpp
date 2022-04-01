@@ -1,2 +1,4 @@
-
-        if (sum < *(&x + 1))
+    // ifstream ifs;
+    // ifs.open("input.txt");
+    // getline(ifs, org);
+    // getline(ifs, fnd);

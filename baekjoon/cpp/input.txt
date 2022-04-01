@@ -1,8 +1,22 @@
-6
-1 2 4 8 16 18
+ababababa
+aba
 
-5
-1 3 5 7 9
+=>2
 
-7
-3 1 6 2 7 30 1
+a a a a a
+a a
+
+=2
+
+
+ababababa
+ababa
+
+=1
+
+
+aaaaaaa
+aa
+=3
+
+
