@@ -1,4 +1,3 @@
-    // ifstream ifs;
-    // ifs.open("input.txt");
-    // getline(ifs, org);
-    // getline(ifs, fnd);
+ = true;
+        // zone[elem] = true;
+        // zone[elem + 1
