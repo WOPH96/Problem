@@ -24,17 +24,15 @@ void print(vector<T> v)
     }
     cout << endl;
 }
-// template <typename T>
-// void print(vector<pair<T, T>> v)
-// {
-//     for (const auto &elem : v)
-//     {
-//         cout << "(" << elem.first << "," << elem.second << ")" << endl;
-//     }
-//     cout << endl;
-// }
-int n, l;
-vector<int> loc;
+template <typename T>
+void print(vector<pair<T, T>> v)
+{
+    for (const auto &elem : v)
+    {
+        cout << "(" << elem.first << "," << elem.second << ")" << endl;
+    }
+    cout << endl;
+}
 
 int main()
 {
@@ -52,64 +50,29 @@ void solve()
     solution();
 }
 
+int n;
+vector<pair<int, int>> classes;
 void input()
 {
-    // ifstream ifs;
-    // ifs.open("input.txt");
-    // ifs >> n >> l;
-    // l *= 2;
-    // loc.reserve(n);
-    // // cout << n << " " << l << endl;
-    // for (int i = 0; i < n; i++)
-    // {
-    //     int water;
-    //     ifs >> water;
-    //     loc.push_back(water * 2);
-    // }
-    // // print(loc);
-    cin >> n >> l;
-    l *= 2;
-    loc.reserve(n);
-    // cout << n << " " << l << endl;
+    ifstream ifs;
+    ifs.open("input.txt");
+    ifs >> n;
     for (int i = 0; i < n; i++)
     {
-        int water;
-        cin >> water;
-        loc.push_back(water * 2);
+        int start, end;
+        ifs >> start >> end;
+        classes.push_back({start, end});
     }
-    // print(loc);
+    print(classes);
 }
-
+bool comp(const pair<int, int> &a, const pair<int, int> &b)
+{
+    if (a.second == b.second)
+        a.first < b.first;
+    return a.second < b.second;
+}
 void solution()
 {
-
-    vector<bool> zone(2002, false);
-    vector<int> waterzone;
-    int cnt = 0;
-    for (const int &elem : loc)
-    {
-        zone[elem - 1] = true;
-        zone[elem] = true;
-        zone[elem + 1] = true;
-    }
-    // for (auto itr = zone.begin(); itr != zone.end(); itr++)
-    // {
-    //     if (*itr)
-    //         cout << itr - zone.begin() << " ";
-    // }
-    // cout << endl;
-    vector<bool>::iterator pos;
-    while ((pos = find(zone.begin(), zone.end(), true)) != zone.end())
-    {
-        cnt++;
-        // cout << cnt << " " << pos - zone.begin() << endl;
-        auto end = pos + l;
-        // cout << pos - zone.begin() << " " << end - zone.begin() << endl;
-        for (; pos != end + 1; pos++)
-        {
-            *pos = false;
-        }
-    }
-
-    cout << cnt << endl;
+    sort(classes.begin(), classes.end(), comp);
+    print(classes);
 }
