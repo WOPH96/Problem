@@ -1,3 +1,8 @@
- = true;
-        // zone[elem] = true;
-        // zone[elem + 1
+const int *v)
+// {
+//     for (const auto &elem : v)
+//     {
+//         cout << elem << " ";
+//     }
+//     cout << endl;
+// }
