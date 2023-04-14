@@ -18,8 +18,18 @@ def dfs(x, y):
     s = []
     s.append(x, y)
     while s:
+        # 현 위치
         x, y = s.pop()
-
+        # 집 없으면 찾을필요 없음
+        if graph[x][y] == 0:
+            continue
+        # 집 있으면
+        if graph[x][y] == 1:
+            # 집 없음 처리하고 주변에 있는 집 샅샅이 뒤지기
+            for i in range(4):
+                nx = x + dx[i]
+                ny = y + dy[i]
+                if()
 
 def sol():
     housing = []
