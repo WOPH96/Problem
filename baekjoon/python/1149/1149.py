@@ -13,12 +13,21 @@ for _ in range(n):
 '''
 for i in range(n):
     for j in range(3):
-        MIN=1000
-        if i == 0 :
+        if i == 0:
             dp[i][j] = t[i][j]
         else:
-            MIN = min(MIN,)
+            # [26,40,83]
+            # if j=0 : min(40,83) -> min(a[1],a[2])
+            # elif j=1 : min(26,83) -> min(a[0],a[2])
+            MIN = 1001
+            for k in range(3):
+                if k == j:
+                    continue
+                MIN = min(MIN, dp[i-1][k])
+            # print(i, j, MIN)
 
-            
-                
-        
+            dp[i][j] = t[i][j] + MIN
+            # print(dp)
+            # print(t)
+            # print()
+print(min(dp[n-1]))
