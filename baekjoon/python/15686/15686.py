@@ -7,3 +7,7 @@ city = [list(map(int, input().split())) for _ in range(n)]
 
 for elem in city:
     print(elem)
+
+'''
+
+'''
