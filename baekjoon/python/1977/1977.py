@@ -1,9 +1,8 @@
 import sys
 sys.stdin = open('1977_input.txt','r')
-m = int(input())
-n = int(input())
+M = int(input())
+N = int(input())
 
-print(m,n)
 
 # def check(x):
 #     return int(x**(1/2))**2==x
@@ -25,5 +24,25 @@ idx=0으로 시작해서
 
 '''
 smalls = list(range(1,101))
-print(smalls)
+
+point = 0
+min_point=-1
+while point<100:
+    if M<=(smalls[point]**2)<=N:
+        min_point=point
+        point+=1
+        break
+    point+=1
+if min_point == -1:
+    print(min_point) 
+    exit()
+
+while point<100:
+    if M<=(smalls[point]**2)<=N:
+        point+=1
+    else:
+        break
+
+print(sum(map(lambda x:x**2,smalls[min_point:point])))
+print(smalls[min_point]**2)
 
