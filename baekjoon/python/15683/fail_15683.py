@@ -67,11 +67,19 @@ viewed.append (리턴좌표들)
 5가 있는가? yes
 view(c_type,pattern) -> 방사좌표 리턴
 
-있는거만 진행
+있는거만 중첩으로 진행
 1,5
 
 
 '''
-avail = sum(camera_available)
-
-for _ in range(avail):
+'''
+avail_prob=[[] for _ in range(7)]
+for i in range(7):
+    if Positions[i]:
+        avail_prob[i]=(product(list(range(prob[i])),repeat=len(Positions[i])))
+        cnt=0
+        for elem in avail_prob[i]:
+            print(elem)
+            cnt+=1
+        print(cnt)
+'''
