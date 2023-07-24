@@ -40,6 +40,7 @@ def bfs(G, v):
                 q.append((nx, ny))
                 if nx == n and ny == m:
                     flag = True
+                    break
         if flag:
             break
 
