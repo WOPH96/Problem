@@ -25,9 +25,9 @@ def bfs(G, v):
     q.append(v)
     dx = [1, -1, 0, 0]
     dy = [0, 0, -1, 1]
-
+    flag = False
     while q:
-        x, y = q.pop()
+        x, y = q.popleft()
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
@@ -38,9 +38,10 @@ def bfs(G, v):
             elif G[nx][ny] == 1:
                 G[nx][ny] += G[x][y]
                 q.append((nx, ny))
-                print()
-                for elem in G:
-                    print(elem)
+                if nx == n and ny == m:
+                    flag = True
+        if flag:
+            break
 
 
 bfs(graph, (0, 0))
