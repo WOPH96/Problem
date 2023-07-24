@@ -35,7 +35,7 @@ def bfs(G, v):
                 continue
             if G[nx][ny] == 0:
                 continue
-            if G[nx][ny] == 1:
+            elif G[nx][ny] == 1:
                 G[nx][ny] += G[x][y]
                 q.append((nx, ny))
                 print()
