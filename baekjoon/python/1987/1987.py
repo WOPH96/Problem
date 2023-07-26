@@ -24,7 +24,19 @@ def bfs(G,v):
     q = deque()
     q.append(v)
     visited[v[0]][v[1]] = G[v[0]][v[1]]
+    dx = [1,-1,0,0]
+    dy = [0,0,1,-1]
+    while q:
+        x,y = q.popleft()
+        for i in range(4):
+            nx,ny = x+dx[i],y+dy[i]
+            #틀에 박지 않았을때만 실행
+            if 0<=nx<r and 0<=ny<c:
+                # 현재 루틴이 이미 방문 했던 문자가 아니라면
+                if not checkin(G[nx][ny]) :
+                    visited[nx][ny] = G[nx][ny]
     pass
 
 bfs(graph,(0,0))
+print(visited)
 # print(visited[0].count(isinstance(str)))
