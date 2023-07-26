@@ -35,6 +35,7 @@ def bfs(G,v):
                 # 현재 루틴이 이미 방문 했던 문자가 아니라면
                 if not checkin(G[nx][ny]) :
                     visited[nx][ny] = G[nx][ny]
+                    q.append((nx,ny))
     pass
 
 bfs(graph,(0,0))
