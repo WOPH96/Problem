@@ -25,7 +25,7 @@ def dfs(x,y,count):
         nx,ny = x+dx[i], y+dy[i]
         if 0<=nx<r and 0<=ny<c and graph[nx][ny] not in history:
                 history.add(graph[nx][ny])
-                # print(G[nx][ny])
+                print(graph[nx][ny],history)
                 dfs(nx,ny,count+1)
                 history.remove(graph[nx][ny])
 
