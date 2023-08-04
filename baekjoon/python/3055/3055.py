@@ -68,35 +68,31 @@ def move_dfs(G,v,que):
     repeat=0
     while s:
         repeat+=1
-        Gr,q,_visit,cnt,x,y = s.pop()
+        _G,_que,_visit,cnt,x,y = s.pop()
         for i in range(4):
             nx,ny = x+dx[i],y+dy[i]
             if 0<=nx<n and 0<=ny<m:
-                graph=deepcopy(Gr)
-                que=deepcopy(q)
+                _graph=deepcopy(_G)
+                _que=deepcopy(_que)
                 visit=deepcopy(_visit)
-                if graph[nx][ny]=='D':
+                if _graph[nx][ny]=='D':
                     print("GET")
                     return cnt+1
-                elif graph[nx][ny]=='.' and not visit[nx][ny]:
+                elif _graph[nx][ny]=='.' and not visit[nx][ny]:
                     #이동하고
-                    graph[nx][ny]='S'
-                    graph[x][y]='.'
+                    _graph[nx][ny]='S'
+                    _graph[x][y]='.'
                     #홍수 범람
-                    # 
-                    # print(que)
-                    
-                    for elem in graph:
-                        print(elem)
-                    que = flood_bfs(graph,que)
-                    print(que)
+                    _que = flood_bfs(_graph,_que)
+
+                    print(_que)
                     print(f"{x,y}->{nx,ny}이동, 현재 cnt={cnt+1}")
-                    for elem in graph:
+                    for elem in _graph:
                         print(elem)
                     print()
-                    s.append((graph,q,visit,cnt+1,nx,ny))
-        # if repeat>3:
-        #     break            
+                    s.append((_graph,_que,visit,cnt+1,nx,ny))
+        if repeat>3:
+            break            
 
 
                 #     graph[nx][ny]='*'
