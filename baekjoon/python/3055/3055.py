@@ -85,12 +85,12 @@ def move_dfs(G,v,que):
                     #홍수 범람
                     # 
                     # print(que)
-                    print(f"{x,y}->{nx,ny}이동, 현재 cnt={cnt+1}")
+                    
                     for elem in graph:
                         print(elem)
                     que = flood_bfs(graph,que)
                     print(que)
-                    print(f"{nx,ny}이동하고나서 홍수, 현재 cnt={cnt+1}")
+                    print(f"{x,y}->{nx,ny}이동, 현재 cnt={cnt+1}")
                     for elem in graph:
                         print(elem)
                     print()
