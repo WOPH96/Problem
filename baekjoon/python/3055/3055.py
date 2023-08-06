@@ -5,14 +5,11 @@ n, m = map(int,input().split())
 
 graph=[]
 visited=[[False]*m for _ in range(n)]
-pos_D = []
 pos_S = []
 pos_W = []
 
 for i in range(n):
     tmp = list(input())
-    if 'D' in tmp:
-        pos_D.append([i,tmp.index('D')])
     if 'S' in tmp:
         pos_S.append([i,tmp.index('S')])
     if '*' in tmp:
@@ -75,6 +72,11 @@ def move_dfs(G,v,que):
                 _graph=deepcopy(_G)
                 _que=deepcopy(_que)
                 visit=deepcopy(_visit)
+
+                print("visit",(nx,ny))
+                for elem in visit:
+                    print(elem)
+
                 if _graph[nx][ny]=='D':
                     print("GET")
                     return cnt+1
