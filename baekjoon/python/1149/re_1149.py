@@ -23,3 +23,14 @@ cost = [list(map(int, input().split())) for _ in range(n)]
 
 for elem in cost:
     print(elem)
+
+dp = [0]*n
+
+for i in range(n):
+    if i == 0:
+        pass
+    if i == n:
+        pass
+
+    for j in range(3):
+        
