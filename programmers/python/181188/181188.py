@@ -3,15 +3,16 @@ import sys
 
 def solution(targets):
     answer = 0
-    targets.sort(lambda x: [x[1], x[0]])
+    targets.sort(key=lambda x: [x[1], x[0]])
     # print(targets)
-    s = []
-    s.append(targets.pop())
-    while targets:
-        start, end = targets.pop()
-        if start >= s[-1][1]:
-            s.append([start, end])
-    print(len(s))
+
+    p = 0
+    for target in targets:
+        if p <= target[0]:
+            answer += 1
+            p = target[1]
+
+    print(answer)
     return answer
 
 
