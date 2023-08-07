@@ -3,7 +3,7 @@ import sys
 
 def solution(targets):
     answer = 0
-    targets.sort(reverse=True)
+    targets.sort(lambda x: [x[1], x[0]])
     # print(targets)
     s = []
     s.append(targets.pop())
