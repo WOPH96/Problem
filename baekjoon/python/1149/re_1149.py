@@ -1,3 +1,5 @@
+from itertools import product
+from itertools import repeat
 import sys
 sys.stdin = open('1149_input.txt', 'r')
 
@@ -19,18 +21,23 @@ i(2 ≤ i ≤ N-1)번 집의 색은 i-1번, i+1번 집의 색과 같지 않아�
 
 n = int(input())
 
-cost = [list(map(int, input().split())) for _ in range(n)]
+costs = [list(map(int, input().split())) for _ in range(n)]
 
-for elem in cost:
-    print(elem)
+# for elem in costs:
+#     print(elem)
 
-dp = [0]*n
+dp = [[0]*3 for _ in range(n)]
 
-for i in range(n):
-    if i == 0:
-        pass
-    if i == n:
-        pass
+for i in range(3):
+    dp[0][i] = costs[0][i]
 
+for i in range(1, n):
     for j in range(3):
-        
+        m = 10**9
+        for k in range(3):
+            if k == j:
+                continue
+            else:
+                m = min(m, dp[i-1][k])
+        dp[i][j] += costs[i][j]+m
+print(min(dp[n-1]))
