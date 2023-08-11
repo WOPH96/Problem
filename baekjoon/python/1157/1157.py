@@ -10,7 +10,9 @@ for char in string:
         dic[char] = 1
     else:
         dic[char] += 1
-
+if len(string) == 1:
+    print(string)
+    exit()
 M = max(dic.keys(), key=lambda k: dic[k])
 v = dic[M]
 dic.pop(M)
