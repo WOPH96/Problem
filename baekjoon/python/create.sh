@@ -11,6 +11,7 @@ touch $1/$1.py
 touch $1/$1_input.txt
 echo "import sys" >> $1/$1.py
 echo "sys.stdin = open('$1_input.txt','r')" >> $1/$1.py
+echo "input = sys.stdin.readline" >> $1/$1.py
 
 #open
 code $1/$1.py
