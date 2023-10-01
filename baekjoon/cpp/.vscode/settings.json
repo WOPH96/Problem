@@ -6,6 +6,10 @@
     "vector": "cpp",
     "iosfwd": "cpp",
     "random": "cpp",
-    "*.tcc": "cpp"
+    "*.tcc": "cpp",
+    "fstream": "cpp",
+    "istream": "cpp",
+    "locale": "cpp",
+    "streambuf": "cpp"
   }
 }
