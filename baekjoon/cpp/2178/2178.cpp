@@ -25,7 +25,15 @@ void bfs(int sx, int sy)
 {
     queue<pair<int, int>> q;
     q.push(make_pair(sx, sy));
-    cout << q.size() << endl;
+    q.push({1, 2});
+    while (!q.empty())
+    {
+        int x, y;
+        x = q.front().first;
+        y = q.front().second;
+        cout << x << y << endl;
+        q.pop();
+    }
 }
 
 int main()
@@ -51,6 +59,8 @@ int main()
             cout << elem;
         cout << endl;
     }
+
+    bfs(0, 0);
 
     return 0;
 }
