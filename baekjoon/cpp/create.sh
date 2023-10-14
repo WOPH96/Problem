@@ -6,16 +6,20 @@ if [ -z $1 ] ; then
 fi
 
 #crete
-mkdir $1
-touch $1/$1.cpp
-touch $1/$1_input.txt
+prob_number=$1
+mkdir -p ${prob_number}
+touch ${prob_number}/${prob_number}.cpp
+touch ${prob_number}/${prob_number}_input.txt
 echo "#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     std::ios_base::sync_with_stdio(false);
+    freopen(\"${prob_number}_input.txt\", \"r\", stdin);
+
+    
     return 0;
-}" >> $1/$1.cpp
+}" >> ${prob_number}/${prob_number}.cpp
 
 
 #open
