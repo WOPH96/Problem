@@ -15,9 +15,10 @@ using namespace std;
 int main()
 {
     std::ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     freopen(\"${prob_number}_input.txt\", \"r\", stdin);
 
-    
+
     return 0;
 }" >> ${prob_number}/${prob_number}.cpp
 
