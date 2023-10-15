@@ -25,13 +25,29 @@ void bfs(int sx, int sy)
 {
     queue<pair<int, int>> q;
     q.push(make_pair(sx, sy));
-    q.push({1, 2});
+    int dx[4] = {1, -1, 0, 0};
+    int dy[4] = {0, 0, 1, -1};
     while (!q.empty())
     {
         int x, y;
         x = q.front().first;
         y = q.front().second;
-        cout << x << y << endl;
+        for (int i = 0; i < 4; i++)
+        {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+
+            if (0 <= nx && nx < n && 0 <= ny && ny < m)
+            {
+                // cout << nx << ny << endl;
+                if (graph[nx][ny] == 1)
+                {
+                    graph[nx][ny] = graph[x][y] + 1;
+                    q.push({nx, ny});
+                }
+            }
+        }
+        // cout << x << y << endl;
         q.pop();
     }
 }
@@ -53,14 +69,22 @@ int main()
         }
     }
 
-    for (int i = 0; i < n; i++)
-    {
-        for (auto &elem : graph[i])
-            cout << elem;
-        cout << endl;
-    }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (auto &elem : graph[i])
+    //         cout << elem << " ";
+    //     cout << endl;
+    // }
 
     bfs(0, 0);
 
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (auto &elem : graph[i])
+    //         cout << elem << " ";
+    //     cout << endl;
+    // }
+
+    cout << graph[n - 1][m - 1] << endl;
     return 0;
 }
