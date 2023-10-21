@@ -12,6 +12,9 @@
     "locale": "cpp",
     "streambuf": "cpp",
     "string": "cpp",
-    "filesystem": "cpp"
+    "filesystem": "cpp",
+    "__split_buffer": "cpp",
+    "deque": "cpp",
+    "list": "cpp"
   }
 }
