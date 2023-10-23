@@ -1,36 +1,90 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
 using namespace std;
 
-vector<string> split(const string &str, const char &dim = ' ')
+// iterable container 받아서, 조합 반환
+template <typename T>
+void combination(vector<T> &vec, int r, vector<vector<T>> &res, bool selected[], int depth = 0, int idx = 0)
 {
-    vector<string> vs; //= {"hello", "my"};
-    string sub;
-    size_t previous = 0, current;
-    current = str.find(dim);
-    while (current != string::npos)
+    if (depth == r)
     {
-        sub = str.substr(previous, current - previous);
-        vs.push_back(sub);
-        previous = current + 1;
-        current = str.find(dim, previous);
+        vector<T> temp;
+        for (int i = 0; i < vec.size(); i++)
+        {
+            if (selected[i] == true)
+            {
+                temp.push_back(vec[i]);
+            }
+        }
+        res.push_back(temp);
     }
-    vs.push_back(str.substr(previous));
+    for (int i = idx; i < vec.size(); i++)
+    {
+        if (selected[i] == true)
+            continue;
+        selected[i] = true;
+        combination(vec, r, res, selected, depth + 1, i);
+        selected[i] = false;
+    }
+}
 
-    // cout << sub;
-    return vs;
+// iterable container 받아서, 순열 반환
+template <typename T>
+void permutation(vector<T> &vec, int r, vector<vector<T>> &res, bool selected[], vector<T> &temp, int depth = 0)
+{
+
+    if (depth == r)
+    {
+        res.push_back(temp);
+    }
+
+    for (int i = 0; i < vec.size(); i++)
+    {
+        if (selected[i] == true)
+            continue;
+        selected[i] = true;
+        temp.push_back(vec[i]);
+        permutation(vec, r, res, selected, temp, depth + 1);
+        temp.pop_back();
+        selected[i] = false;
+    }
 }
 
 int main()
 {
-    vector<string> str;
+    string s = "1234";
+    const int len = s.size();
 
-    string line = "hello my name is wonphil";
-    str = split(line, ',');
-    for (auto &elem : str)
+    vector<char> vec_string;
+    vector<vector<char>> res;
+    vector<char> temp;
+    bool selected[len];
+    memset(selected, false, len);
+    for (auto &elem : s)
     {
-        cout << elem << endl;
+        vec_string.push_back(elem);
     }
 
+    // combination(vec_string, 2, res, selected);
+    for (int i = 0; i < res.size(); i++)
+    {
+        for (auto &elem : res[i])
+        {
+            cout << elem << " ";
+        }
+        cout << "\n";
+    }
+    memset(selected, false, len);
+    permutation(vec_string, 2, res, selected, temp);
+    for (int i = 0; i < res.size(); i++)
+    {
+        for (auto &elem : res[i])
+        {
+            cout << elem << " ";
+        }
+        cout << "\n";
+    }
     return 0;
 }
