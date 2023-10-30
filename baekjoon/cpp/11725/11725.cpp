@@ -1,6 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
 vector<int> graph[100001];
+bool visited[100001] = {
+    false,
+};
+int parent[100001] = {
+    0,
+};
+
+void bfs()
+{
+    queue<int> q;
+    q.push(1);
+    visited[1] = true;
+    while (!q.empty())
+    {
+        int out = q.front();
+        q.pop();
+        for (auto &elem : graph[out])
+        {
+            if (!visited[elem])
+            {
+                parent[elem] = out;
+                visited
+            }
+        }
+    }
+}
+
 int main()
 {
     std::ios_base::sync_with_stdio(false);
@@ -24,6 +51,6 @@ int main()
         }
         cout << endl;
     }
-
+    bfs();
     return 0;
 }
