@@ -22,7 +22,7 @@ void bfs()
             if (!visited[elem])
             {
                 parent[elem] = out;
-                visited
+                
             }
         }
     }
