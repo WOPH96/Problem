@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <vector>
+#include <queue>
+#include <iostream>
+
 using namespace std;
 vector<int> graph[100001];
 bool visited[100001] = {
@@ -21,8 +24,9 @@ void bfs()
         {
             if (!visited[elem])
             {
+                visited[elem] = true;
                 parent[elem] = out;
-                
+                q.push(elem);
             }
         }
     }
@@ -43,14 +47,17 @@ int main()
         graph[a].push_back(b);
         graph[b].push_back(a);
     }
-    for (int i = 1; i <= n; i++)
-    {
-        for (auto &elem : graph[i])
-        {
-            cout << elem << " ";
-        }
-        cout << endl;
-    }
+    // for (int i = 1; i <= n; i++)
+    // {
+    //     for (auto &elem : graph[i])
+    //     {
+    //         cout << elem << " ";
+    //     }
+    //     cout << endl;
+    // }
     bfs();
+    for (int i=2;i<=n;i++){
+        cout << parent[i] << "\n";
+    }
     return 0;
 }
