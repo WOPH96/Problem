@@ -16,6 +16,10 @@
     "__split_buffer": "cpp",
     "deque": "cpp",
     "list": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "tuple": "cpp",
+    "array": "cpp",
+    "variant": "cpp",
+    "__locale": "cpp"
   }
 }
