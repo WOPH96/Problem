@@ -1,0 +1,26 @@
+{
+  "files.associations": {
+    "ostream": "cpp",
+    "iostream": "cpp",
+    "ios": "cpp",
+    "vector": "cpp",
+    "iosfwd": "cpp",
+    "random": "cpp",
+    "*.tcc": "cpp",
+    "fstream": "cpp",
+    "istream": "cpp",
+    "locale": "cpp",
+    "streambuf": "cpp",
+    "string": "cpp",
+    "filesystem": "cpp",
+    "__split_buffer": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "queue": "cpp",
+    "tuple": "cpp",
+    "array": "cpp",
+    "variant": "cpp",
+    "__locale": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "enabled"
+}
