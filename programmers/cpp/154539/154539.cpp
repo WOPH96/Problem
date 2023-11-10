@@ -5,7 +5,7 @@ using namespace std;
 
 vector<int> solution(vector<int> numbers)
 {
-    vector<int> answer;
+    vector<int> answer(numbers.size(), 0);
 
     // probably 시간초과
     // for (int i = 0; i < numbers.size(); i++)
@@ -22,6 +22,23 @@ vector<int> solution(vector<int> numbers)
     //     if (j == numbers.size())
     //         answer.push_back(-1);
     // }
+
+    vector<int> stack;
+
+    for (int i = 0; i < numbers.size(); i++)
+    {
+        while (!stack.empty() && numbers[stack.back()] < numbers[i])
+        {
+            answer[stack.back()] = numbers[i];
+            stack.pop_back();
+        }
+        stack.push_back(i);
+    }
+    for (auto &elem : stack)
+    {
+        answer[elem] = -1;
+    }
+
     for (auto &elem : answer)
     {
         cout << elem << " ";
