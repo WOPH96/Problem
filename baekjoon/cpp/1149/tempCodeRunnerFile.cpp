@@ -51,14 +51,3 @@ int main()
     cout << *min_element(dp[n - 1].begin(), dp[n - 1].end()) << "\n";
     return 0;
 }
-#include <bits/stdc++.h>
-using namespace std;
-int main()
-{
-    std::ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    freopen("1149_input.txt", "r", stdin);
-
-
-    return 0;
-}
